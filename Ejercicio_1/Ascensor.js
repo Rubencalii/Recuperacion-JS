@@ -38,3 +38,44 @@ while (contadorPeticiones < 10) {
         console.log("Planta no valida, hazlo de nuevo");
     }
 }
+
+// Procesamiento de datos y muestra de resultados
+
+console.log("Historial de las plantass solicitadas: ", peticiones);
+
+// Planta maxima y planta minima
+
+let plantaMaxima = Math.max(...peticiones);
+let plantaMinima = Math.min(...peticiones);
+
+console.log("Planta maxima solicitada: " + plantaMaxima);
+console.log("Planta minima solicitada: " + plantaMinima);
+
+// Plantas solicitadas 
+
+console.log("\n Plantas solicitadas: ");
+
+   for (let i = 0; i <= 9; i++) {
+    let veces = peticiones.filter(piso => piso === i).length;
+
+        if (veces > 0) {
+            console.log(`Planta ${i}: ${veces} veces`);
+        }
+
+}
+
+//Solicitudes ordenadas de mayor a menor 
+
+const porEncima = peticiones.filter(p => p > plantaActual).length;
+const porDebajo = peticiones.filter(p => p < plantaActual).length;
+
+console.log("\n Solicitudes ordenadas de mayor a menor: ");
+
+console.log(`\n Por encima de la planta actual:  (${plantaActual}): ${porEncima}`);
+console.log(`\n Por debajo de la planta actual:  (${plantaActual}): ${porDebajo}`);
+
+// Plantas sin repetir 
+
+const plantasUnicas = peticiones.filter((piso, index) => peticiones.indexOf(piso) === index);
+
+console.log("\n Plantas sin repetir: ", plantasUnicas);
