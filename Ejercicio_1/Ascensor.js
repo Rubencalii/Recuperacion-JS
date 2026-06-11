@@ -12,7 +12,8 @@ let plantaInicial = false;
 while (!plantaInicial) {
     let entrada = prompt("Ingrese la planta actual 0 y el 9:");
     let planta = parseInt(entrada);
-
+    // Añadir console.log
+    
     if (planta >= 0 && planta <= 9) {
         plantaActual = planta;
         plantaInicial = true;
@@ -30,7 +31,7 @@ let contadorPeticiones = 0;
 while (contadorPeticiones < 10) {
     let entrada = prompt(`[Petición ${contadorPeticiones + 1} de 10] ¿A qué planta se dirige el ascensor? (0-9):`);
     let piso = parseInt(entrada);
-
+    
     if (!isNaN(piso) && piso >= 0 && piso <= 9) {
         peticiones.push(piso);
         contadorPeticiones++;
