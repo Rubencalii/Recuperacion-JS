@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Gestor de peliculas</title>
+    <style>
+        body { font-family: sans-serif; margin: 30px; background-color: #f4f4f4; }
+        .contenedor { background: white; padding: 20px; border-radius: 8px; max-width: 500px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        form { margin-bottom: 20px; }
+        input[type="text"] { width: 70%; padding: 8px; margin-right: 10px; }
+        button { padding: 8px 12px; cursor: pointer; }
+        li { margin: 8px 0; display: flex; justify-content: space-between; align-items: center; background: #eee; padding: 8px; border-radius: 4px; }
+        .btn-borrar { background: #ff4d4d; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Mi Gestor de Películas</h2>
+        
+        <form id="formularioPeliculas">
+            <input type="text" id="nuevaPelicula" placeholder="Introduce el título de la película..." required>
+            <button type="submit" id="btnAñadir">Añadir</button>
+        </form>
+
+        <h3>Lista de Películas:</h3>
+        <ul id="listaPeliculas"></ul>
+    </div>
+
+    <script src="Pelicula.js"></script>
+</body>
+</html>

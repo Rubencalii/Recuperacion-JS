@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Horario LocalStorage</title>
+    <style>
+        body { font-family: sans-serif; margin: 30px; background-color: #f4f4f4; }
+        .contenedor { background: white; padding: 20px; border-radius: 8px; max-width: 800px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin: 0 auto; }
+        form { margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+        select, input, button { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #333; color: white; }
+        td { height: 50px; }
+        .celda-clase { background-color: #e2f0cb; border-radius: 4px; padding: 4px; position: relative; }
+        .btn-borrar-celda { background: #ff4d4d; color: white; border: none; padding: 2px 6px; font-size: 10px; border-radius: 3px; cursor: pointer; margin-top: 5px; display: block; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Mi Gestor de Horario Escolar</h2>
+        
+        <form id="formularioHorario">
+            <input type="text" id="asignatura" placeholder="Ej: PHP, React, CSS..." required>
+            
+            <select id="diaSemana" required>
+                <option value="">Selecciona Dia</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+            </select>
+
+            <select id="horaTramo" required>
+                <option value="">Selecciona Hora</option>
+                <option value="1">08:15 - 09:15</option>
+                <option value="2">09:15 - 10:15</option>
+                <option value="3">10:15 - 11:15</option>
+                <option value="4">11:45 - 12:45</option>
+                <option value="5">12:45 - 13:45</option>
+                <option value="6">13:45 - 14:45</option>
+            </select>
+
+            <button type="submit">Asignar Clase</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+                </tbody>
+        </table>
+    </div>
+    <script src="Horario.js"></script>
+</body>
+</html>
