@@ -39,7 +39,7 @@ formulario.addEventListener('submit', (evento) => {
     
     // Validacion vacia
     if(titulo === "") {
-        // CORREGIDO: Usamos la función mostrarError
+
         mostrarError("Escribe el título de una película.");
         return;
     }
@@ -53,7 +53,7 @@ formulario.addEventListener('submit', (evento) => {
     }
 
     if(yaExiste) {
-        // CORREGIDO: Usamos la función mostrarError
+
         mostrarError(`La película "${titulo}" ya está en tu lista.`);
         inputPelicula.value = "";
         return;
@@ -84,7 +84,6 @@ const renderizarLista = () => {
         li.appendChild(textoPelicula);
 
         // Creamos el boton de borrar
-        // CORREGIDO: "button" con 'n'
         const botonBorrar = document.createElement("button");
         botonBorrar.textContent = "Borrar";
         botonBorrar.classList.add("btn-borrar");
